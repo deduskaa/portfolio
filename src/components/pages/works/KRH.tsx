@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import {
   Wrapper,
   Heading,
@@ -17,7 +16,6 @@ import {
 import krhMultipleViewPic from '../../../assets/works/krh_desktop_mobile.jpg';
 import krhDesktopPic from '../../../assets/works/krh_desktop.jpg';
 import krhFrontPic from '../../../assets/works/krh_frontpage.jpg';
-import { theme } from '../../theme';
 
 export default function KRH() {
   return (

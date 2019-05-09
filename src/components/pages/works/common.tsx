@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../theme';
-import { appearUp, fadeIn } from '../../animations';
+import { fadeIn } from '../../animations';
 
 export const Wrapper = styled.section`
   max-width: 1200px;

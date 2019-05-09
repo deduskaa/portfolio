@@ -7,10 +7,8 @@ import {
   Img,
   ImgWrapper,
   Section,
-  Column,
   SubTitle,
   Text,
-  SubTitleLink
 } from './common';
 import rollUpPic from '../../../assets/works/marketing_rollup.jpg';
 import socialMediaPic from '../../../assets/works/marketing_social.jpg';

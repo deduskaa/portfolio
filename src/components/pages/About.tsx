@@ -106,7 +106,7 @@ export default function About() {
   return (
     <Section>
       <ImgWrapper>
-        <img src={youngMe} />
+        <img src={youngMe} alt="Me as a youngster" />
       </ImgWrapper>
       <Wrapper>
         <Title>About Me</Title>

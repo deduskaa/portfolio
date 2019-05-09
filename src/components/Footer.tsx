@@ -61,7 +61,7 @@ export default function Footer() {
         {socialLinks.map(social => (
           <a
             href={social.link}
-            rel="noopener"
+            rel="noopener noreferrer"
             target="_blank"
             key={social.title}
           >

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from './theme';
 import { Link as RouterLink } from 'react-router-dom';
-import { appearUp } from './animations';
 
 const Navbar = styled.nav`
   display: flex;
