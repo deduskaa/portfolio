@@ -16,7 +16,8 @@ class App extends Component {
         <div className='App'>
           <Nav />
           <Route component={ScrollToTop} />
-          <Route exact path='/' component={Home} />
+          <Redirect path='/' to="/portfolio" />
+          <Route path='/portfolio' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/works' component={WorkRoutes} />
           <Footer />
