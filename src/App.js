@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Footer from './components/Footer';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 import Movix from './components/pages/works/Movix';
 import KRH from './components/pages/works/KRH';
 import Marketing from './components/pages/works/Marketing';
@@ -16,7 +16,6 @@ class App extends Component {
         <div className='App'>
           <Nav />
           <Route component={ScrollToTop} />
-          <Redirect path='/' to="/portfolio" />
           <Route path='/portfolio' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/works' component={WorkRoutes} />
