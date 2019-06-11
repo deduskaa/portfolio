@@ -56,7 +56,7 @@ export default function Nav() {
   return (
     <Navbar>
       <Title>
-        <RouterLink to='/'>Jenny Tran</RouterLink>
+        <RouterLink to='/portfolio'>Jenny Tran</RouterLink>
       </Title>
       <LinkList>
         <li>
