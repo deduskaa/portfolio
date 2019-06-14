@@ -60,6 +60,7 @@ export default function Footer() {
       <div>
         {socialLinks.map(social => (
           <a
+            aria-label={social.title}
             href={social.link}
             rel="noopener noreferrer"
             target="_blank"
