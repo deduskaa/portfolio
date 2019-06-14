@@ -1,3 +1,10 @@
+language: node_js
+node_js: "stable"
+script:
+  - npm run build
+cache:
+  directories:
+  - node_modules
 deploy:
   provider: s3
   access_key_id: "$AWS_ access_key_id"
@@ -7,3 +14,5 @@ deploy:
   acl: public_read
   region: eu-west-2
   local_dir: build
+  on:
+    branch: master
