@@ -1,0 +1,9 @@
+deploy:
+  provider: s3
+  access_key_id: "$AWS_ access_key_id"
+  secret_access_key: "$AWS_secret_access_key"
+  bucket: "jennytran.ninja"
+  skip_cleanup: true
+  acl: public_read
+  region: eu-west-2
+  local_dir: build
