@@ -12,7 +12,7 @@ deploy:
   bucket: "jennytran.ninja"
   skip_cleanup: true
   acl: public_read
-  region: eu-west-2
+  region: eu-west-1
   local_dir: build
   on:
     branch: master
