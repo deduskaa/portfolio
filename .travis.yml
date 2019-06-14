@@ -7,7 +7,7 @@ cache:
   - node_modules
 deploy:
   provider: s3
-  access_key_id: "$AWS_ access_key_id"
+  access_key_id: "$AWS_access_key_id"
   secret_access_key: "$AWS_secret_access_key"
   bucket: "jennytran.ninja"
   skip_cleanup: true
