@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import youngMe from '../../assets/youngme.jpg';
-import { theme } from '../theme';
+import React from 'react'
+import styled from 'styled-components'
+import youngMe from '../../assets/youngme.jpg'
+import { theme } from '../theme'
 
 const Section = styled.section`
   max-width: 1200px;
@@ -10,13 +10,13 @@ const Section = styled.section`
   justify-content: center;
   flex-wrap: wrap;
   padding: 50px 0;
-`;
+`
 
 const Title = styled.h3`
   font-weight: 500;
   font-size: 18px;
   margin: 30px 0 10px;
-`;
+`
 
 const ImgWrapper = styled.div`
   flex: 1 1 100%;
@@ -26,59 +26,67 @@ const ImgWrapper = styled.div`
   img {
     border-radius: 50%;
   }
-`;
+`
 
 const Wrapper = styled.div`
   max-width: 750px;
   flex: 1 1 100%;
-`;
+`
 
 const Description = styled.p`
   line-height: 1.7;
   font-family: ${theme.fonts.light_text};
   font-size: 18px;
   margin: 0;
-`;
 
-const Tag = styled.div<{ tag: string }>`
+  a {
+    color: ${theme.colors.main};
+  }
+`
+
+const Tag = styled.div`
   border-radius: 10px;
   padding: 5px 10px;
   background-color: ${p =>
-    p.tag === 'design' ? theme.tags.design : p.tag === 'marketing' ? theme.tags.marketing : theme.tags.dev};
+    p.tag === 'design'
+      ? theme.tags.design
+      : p.tag === 'marketing'
+      ? theme.tags.marketing
+      : theme.tags.dev};
   margin: 5px 5px 5px 0;
-  color: ${theme.colors.text}
+  color: ${theme.colors.text};
   font-family: ${theme.fonts.light_text};
-`;
+`
 
 const TagContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-`;
+`
 
 const ExpWrapper = styled.div`
-    margin: 15px 0 0;
-`;
+  margin: 15px 0 0;
+`
 
 const ExperienceRow = styled.h4`
   margin: 0;
   font-weight: 400;
   margin-bottom: 5px;
-`;
+`
 
 const WorkTitle = styled.span`
   font-family: ${theme.fonts.italic_main};
   font-size: 14px;
   color: ${theme.colors.text};
-`;
+`
 
 const Time = styled.p`
   text-transform: uppercase;
   margin: 0 0 20px;
   font-size: 12px;
   color: ${theme.colors.gray};
-`;
+`
 
-export default function About() {
+export const About = () => {
   const skills = [
     { title: 'HTML', tag: 'web' },
     { title: 'CSS', tag: 'web' },
@@ -101,7 +109,7 @@ export default function About() {
     { title: 'SEO', tag: 'marketing' },
     { title: 'Google Analytics', tag: 'marketing' },
     { title: 'Ensighten', tag: 'marketing' }
-  ];
+  ]
 
   return (
     <Section>
@@ -111,9 +119,9 @@ export default function About() {
       <Wrapper>
         <Title>About Me</Title>
         <Description>
-          Hi! I'm Jenny Tran, a front end dev focused in UI/UX design. I'm always looking for new and exciting
-          opportunities, so don't hesitate to get in touch via <a href='mailto:jennny.tran@gmail.com'>email</a>. My
-          interests lie particulary in front end development, executing beautiful UIs and motion design.
+          Hi! I'm Jenny Tran, a front end dev focused in UI/UX design. Have something to talk about?
+          Send me an <a href="mailto:jennny.tran@gmail.com">email</a>. My interests lie particulary
+          in front end development, executing beautiful UIs and motion design.
         </Description>
 
         <Title>What I know</Title>
@@ -126,23 +134,27 @@ export default function About() {
         <Title>Work experience</Title>
         <ExpWrapper>
           <ExperienceRow>
+            Consultant — <WorkTitle>COLUMBIA ROAD, Helsinki</WorkTitle>
+          </ExperienceRow>
+          <Time>October 2019 - current</Time>
+          <ExperienceRow>
             Software Developer — <WorkTitle>ALMA TALENT OY, Helsinki</WorkTitle>
           </ExperienceRow>
-          <Time>March 2018 - </Time>
+          <Time>March 2018 - September 2019, 1 year 9 months </Time>
           <ExperienceRow>
-           Front-end Developer — <WorkTitle>APPRIX OY, Helsinki</WorkTitle>
+            Front-end Developer — <WorkTitle>APPRIX OY, Helsinki</WorkTitle>
           </ExperienceRow>
-          <Time>September 2017 - March 2018, 6 KK</Time>
+          <Time>September 2017 - March 2018, 6 months</Time>
           <ExperienceRow>
             Shop assistant — <WorkTitle>EJ-HOLDING OY, Espoo</WorkTitle>
           </ExperienceRow>
-          <Time>July 2013 - January 2017, 3 V 8 KK</Time>
+          <Time>July 2013 - January 2017, 3 years 8 months</Time>
           <ExperienceRow>
             Marketing assistant — <WorkTitle>BERNER OY, Helsinki</WorkTitle>
           </ExperienceRow>
-          <Time>August 2015 - April 2016, 9 KK</Time>
+          <Time>August 2015 - April 2016, 9 months</Time>
         </ExpWrapper>
       </Wrapper>
     </Section>
-  );
+  )
 }

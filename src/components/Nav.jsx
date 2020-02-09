@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import { theme } from './theme';
-import { Link as RouterLink } from 'react-router-dom';
+import React from 'react'
+import styled from 'styled-components'
+import { Link as RouterLink } from 'react-router-dom'
+import { theme } from './theme'
 
 const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 20px;
-`;
+`
 
 const LinkList = styled.ul`
   list-style-type: none;
@@ -19,20 +19,20 @@ const LinkList = styled.ul`
     display: inline-block;
     padding: 15px 20px;
   }
-`;
+`
 
 const Title = styled.h1`
   margin: 20px;
   font-weight: normal;
-`;
+`
 
 const Link = styled(RouterLink)`
   cursor: pointer;
   color: #444;
-  transition: color 0.2s
+  transition: color 0.2s;
   position: relative;
-  
-  &:after{
+
+  &:after {
     content: '';
     width: 0;
     background-color: ${theme.colors.main};
@@ -40,7 +40,7 @@ const Link = styled(RouterLink)`
     height: 2px;
     bottom: -5px;
     left: 0;
-    transition: width .25s;
+    transition: width 0.25s;
   }
 
   &:hover {
@@ -50,22 +50,20 @@ const Link = styled(RouterLink)`
       width: 100%;
     }
   }
-`;
+`
 
-export default function Nav() {
-  return (
-    <Navbar>
-      <Title>
-        <RouterLink to='/'>Jenny Tran</RouterLink>
-      </Title>
-      <LinkList>
-        <li>
-          <Link to='/'>Work</Link>
-        </li>
-        <li>
-          <Link to='/about'>About me</Link>
-        </li>
-      </LinkList>
-    </Navbar>
-  );
-}
+export const Nav = () => (
+  <Navbar>
+    <Title>
+      <RouterLink to="/">Jenny Tran</RouterLink>
+    </Title>
+    <LinkList>
+      <li>
+        <Link to="/">Work</Link>
+      </li>
+      <li>
+        <Link to="/about">About me</Link>
+      </li>
+    </LinkList>
+  </Navbar>
+)

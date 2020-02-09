@@ -1,29 +1,29 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { theme } from './theme';
-import { appearUp, fadeIn } from './animations';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import styled, { css } from 'styled-components'
+import { theme } from './theme'
+import { appearUp, fadeIn } from './animations'
+import { Link } from 'react-router-dom'
 
 function createCSSAnimationDelayLoop() {
-  let styles = '';
+  let styles = ''
 
   for (let i = 1; i < 5; i++) {
     styles += `
      &:nth-child(${i}) {
          animation-delay: ${i * 50}ms;
        }
-     `;
+     `
   }
 
   return css`
     ${styles}
-  `;
+  `
 }
 
 const Img = styled.img`
   height: 100%;
   width: 100%;
-`;
+`
 
 const Title = styled.h3`
   margin: 0;
@@ -31,7 +31,7 @@ const Title = styled.h3`
   font-weight: 400;
   color: ${theme.colors.text};
   transition: color 0.22s ease-out;
-`;
+`
 
 const Description = styled.p`
   animation: ${fadeIn} 0.2;
@@ -41,7 +41,7 @@ const Description = styled.p`
   margin: 10px 0;
   transition: opacity 0.4s ease-in;
   visibility: hidden;
-`;
+`
 
 const TextContainer = styled.div`
   position: absolute;
@@ -49,7 +49,7 @@ const TextContainer = styled.div`
   left: 35px;
   z-index: 1;
   max-width: 70%;
-`;
+`
 
 const Overlay = styled.div`
   top: 0;
@@ -80,7 +80,7 @@ const Overlay = styled.div`
     opacity: 0;
     transition: all 0.25s;
   }
-`;
+`
 
 const Wrapper = styled.div`
   margin: 25px 35px;
@@ -108,26 +108,17 @@ const Wrapper = styled.div`
       }
     }
   }
-`;
+`
 
-interface Props {
-  img: string;
-  title: string;
-  content: string;
-  link: string;
-}
-
-export default function Work(props: Props) {
-  return (
-    <Wrapper>
-      <TextContainer>
-        <Title>{props.title}</Title>
-        <Description>{props.content}</Description>
-      </TextContainer>
-      <Img src={props.img} alt={props.title} />
-      <Overlay>
-        <Link to={props.link}>Read more ></Link>
-      </Overlay>
-    </Wrapper>
-  );
-}
+export const Work = ({ title, content, img, link }) => (
+  <Wrapper>
+    <TextContainer>
+      <Title>{title}</Title>
+      <Description>{content}</Description>
+    </TextContainer>
+    <Img src={img} alt={title} />
+    <Overlay>
+      <Link to={link}>Read more ></Link>
+    </Overlay>
+  </Wrapper>
+)
